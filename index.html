@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanya Vaidya | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo">Tanya<span class="logo-dot">.</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+
+  <!-- Original blue alien buddy character -->
+  <div class="hero-illustration" aria-hidden="true">
+    <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" class="character-svg">
+
+      <!-- Stars / sparkles background -->
+      <circle cx="28"  cy="35"  r="2.5" fill="#c9a0b4" opacity="0.6"/>
+      <circle cx="292" cy="60"  r="2"   fill="#c9a0b4" opacity="0.5"/>
+      <circle cx="272" cy="22"  r="3"   fill="#9ecfea" opacity="0.7"/>
+      <circle cx="48"  cy="110" r="2"   fill="#c9a0b4" opacity="0.5"/>
+      <circle cx="300" cy="160" r="2"   fill="#9ecfea" opacity="0.5"/>
+      <g class="sparkle s1" transform="translate(55,52)">
+        <line x1="0" y1="-7" x2="0" y2="7" stroke="#c9a0b4" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-7" y1="0" x2="7" y2="0" stroke="#c9a0b4" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+      <g class="sparkle s2" transform="translate(268,48)">
+        <line x1="0" y1="-6" x2="0" y2="6" stroke="#9ecfea" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="-6" y1="0" x2="6" y2="0" stroke="#9ecfea" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+
+      <!-- ── ALIEN BUDDY ── -->
+
+      <!-- Big floppy ears (behind body) -->
+      <ellipse cx="82"  cy="178" rx="28" ry="48" fill="#5babd6" transform="rotate(-15,82,178)"/>
+      <ellipse cx="238" cy="178" rx="28" ry="48" fill="#5babd6" transform="rotate(15,238,178)"/>
+      <!-- Inner ear -->
+      <ellipse cx="82"  cy="178" rx="16" ry="32" fill="#3d8ab8" transform="rotate(-15,82,178)" opacity="0.6"/>
+      <ellipse cx="238" cy="178" rx="16" ry="32" fill="#3d8ab8" transform="rotate(15,238,178)" opacity="0.6"/>
+
+      <!-- Body (chubby round) -->
+      <ellipse cx="160" cy="290" rx="68" ry="80" fill="#5babd6"/>
+      <!-- Belly lighter patch -->
+      <ellipse cx="160" cy="295" rx="42" ry="52" fill="#8dcfea" opacity="0.55"/>
+
+      <!-- Small arms -->
+      <ellipse cx="94"  cy="258" rx="20" ry="12" fill="#5babd6" transform="rotate(-30,94,258)"/>
+      <ellipse cx="226" cy="258" rx="20" ry="12" fill="#5babd6" transform="rotate(30,226,258)"/>
+      <!-- Paws -->
+      <ellipse cx="80"  cy="272" rx="14" ry="10" fill="#4a9ac4"/>
+      <ellipse cx="240" cy="272" rx="14" ry="10" fill="#4a9ac4"/>
+      <!-- Paw toe lines -->
+      <line x1="74" y1="270" x2="74" y2="278" stroke="#3d8ab8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="80" y1="268" x2="80" y2="277" stroke="#3d8ab8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="86" y1="270" x2="86" y2="278" stroke="#3d8ab8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="234" y1="270" x2="234" y2="278" stroke="#3d8ab8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="240" y1="268" x2="240" y2="277" stroke="#3d8ab8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="246" y1="270" x2="246" y2="278" stroke="#3d8ab8" stroke-width="1.5" stroke-linecap="round"/>
+
+      <!-- Stubby legs -->
+      <ellipse cx="138" cy="358" rx="22" ry="16" fill="#4a9ac4"/>
+      <ellipse cx="182" cy="358" rx="22" ry="16" fill="#4a9ac4"/>
+      <!-- Feet -->
+      <ellipse cx="136" cy="370" rx="26" ry="12" fill="#3d8ab8"/>
+      <ellipse cx="184" cy="370" rx="26" ry="12" fill="#3d8ab8"/>
+
+      <!-- Head -->
+      <ellipse cx="160" cy="162" rx="72" ry="70" fill="#5babd6"/>
+
+      <!-- Head markings / stripes -->
+      <path d="M130,100 Q160,88 190,100" stroke="#4a9ac4" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- Big oval eyes (cute alien style) -->
+      <ellipse cx="132" cy="158" rx="22" ry="26" fill="white"/>
+      <ellipse cx="188" cy="158" rx="22" ry="26" fill="white"/>
+      <!-- Iris -->
+      <ellipse cx="136" cy="162" rx="14" ry="18" fill="#1a5c8a"/>
+      <ellipse cx="192" cy="162" rx="14" ry="18" fill="#1a5c8a"/>
+      <!-- Pupil -->
+      <circle cx="138" cy="164" r="9"  fill="#0a2a40"/>
+      <circle cx="194" cy="164" r="9"  fill="#0a2a40"/>
+      <!-- Eye shine -->
+      <circle cx="133" cy="158" r="4"  fill="white" opacity="0.9"/>
+      <circle cx="189" cy="158" r="4"  fill="white" opacity="0.9"/>
+      <circle cx="142" cy="170" r="2"  fill="white" opacity="0.5"/>
+      <circle cx="198" cy="170" r="2"  fill="white" opacity="0.5"/>
+
+      <!-- Small antenna / head spikes -->
+      <ellipse cx="140" cy="96" rx="7" ry="16" fill="#4a9ac4" transform="rotate(-20,140,96)"/>
+      <ellipse cx="160" cy="90" rx="7" ry="18" fill="#4a9ac4"/>
+      <ellipse cx="180" cy="96" rx="7" ry="16" fill="#4a9ac4" transform="rotate(20,180,96)"/>
+      <!-- Spike tips (pink) -->
+      <ellipse cx="136" cy="82" rx="5" ry="8"  fill="#d4899a" transform="rotate(-20,136,82)"/>
+      <ellipse cx="160" cy="74" rx="5" ry="8"  fill="#d4899a"/>
+      <ellipse cx="184" cy="82" rx="5" ry="8"  fill="#d4899a" transform="rotate(20,184,82)"/>
+
+      <!-- Nose (small round) -->
+      <ellipse cx="160" cy="185" rx="8" ry="5" fill="#4a9ac4"/>
+      <ellipse cx="156" cy="184" rx="3" ry="2" fill="#3d8ab8" opacity="0.6"/>
+      <ellipse cx="164" cy="184" rx="3" ry="2" fill="#3d8ab8" opacity="0.6"/>
+
+      <!-- Big happy smile -->
+      <path d="M134,200 Q160,224 186,200" stroke="#2a5a7a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <!-- Tiny teeth -->
+      <rect x="148" y="200" width="8" height="7" rx="2" fill="white"/>
+      <rect x="160" y="200" width="8" height="7" rx="2" fill="white"/>
+
+      <!-- Blush cheeks -->
+      <ellipse cx="108" cy="190" rx="14" ry="8" fill="#e8919e" opacity="0.4"/>
+      <ellipse cx="212" cy="190" rx="14" ry="8" fill="#e8919e" opacity="0.4"/>
+
+      <!-- Laptop the alien is holding -->
+      <rect x="106" y="305" width="108" height="68" rx="8" fill="#2a3a50"/>
+      <rect x="112" y="311" width="96" height="56" rx="5" fill="#1a2535"/>
+      <!-- Screen code lines -->
+      <rect x="118" y="318" width="45" height="3" rx="1.5" fill="#c9a0b4" opacity="0.8"/>
+      <rect x="118" y="326" width="68" height="3" rx="1.5" fill="#9ecfea" opacity="0.7"/>
+      <rect x="124" y="334" width="55" height="3" rx="1.5" fill="#e8c1d0" opacity="0.6"/>
+      <rect x="118" y="342" width="38" height="3" rx="1.5" fill="#c9a0b4" opacity="0.7"/>
+      <rect x="124" y="350" width="60" height="3" rx="1.5" fill="#9ecfea" opacity="0.5"/>
+      <rect class="cursor-blink" x="186" y="350" width="2" height="8" rx="1" fill="#ff9ec8"/>
+      <!-- Laptop base -->
+      <rect x="96" y="372" width="128" height="8" rx="4" fill="#2a3a50"/>
+
+      <!-- Floating icons around alien -->
+      <g class="float-icon fi1" transform="translate(16,200)">
+        <rect width="36" height="30" rx="8" fill="#9ecfea" opacity="0.25"/>
+        <text x="6" y="22" font-size="16">🔒</text>
+      </g>
+      <g class="float-icon fi2" transform="translate(268,170)">
+        <rect width="36" height="30" rx="8" fill="#9ecfea" opacity="0.25"/>
+        <text x="6" y="22" font-size="16">🤖</text>
+      </g>
+      <g class="float-icon fi3" transform="translate(18,310)">
+        <rect width="36" height="30" rx="8" fill="#c9a0b4" opacity="0.25"/>
+        <text x="6" y="22" font-size="16">🌐</text>
+      </g>
+      <g class="float-icon fi4" transform="translate(270,280)">
+        <rect width="36" height="30" rx="8" fill="#c9a0b4" opacity="0.25"/>
+        <text x="6" y="22" font-size="16">✨</text>
+      </g>
+
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <h1>I'm <span class="name-highlight">Tanya Vaidya</span></h1>
+    <h2 class="hero-subtitle">B.Tech Computer Science Engineering Student</h2>
+    <p class="typing-wrap">
+      <span class="typing-prefix">I craft </span>
+      <span class="typing-text" id="typingText"></span>
+      <span class="typing-cursor">|</span>
+    </p>
+    <div class="buttons">
+      <a href="resume.pdf" target="_blank" class="btn btn-primary">View Resume</a>
+      <a href="resume.pdf" download class="btn btn-outline">Download CV</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Skills</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">CSE</span><span class="stat-label">B.Tech</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Curiosity</span></div>
+    </div>
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid">
+    <div class="about-avatar">
+      <!-- Small alien sitting calmly -->
+      <div class="about-alien-wrap">
+        <svg viewBox="0 0 180 200" xmlns="http://www.w3.org/2000/svg" class="about-alien-svg">
+          <!-- Decorative ring (static, no rotation) -->
+          <circle cx="90" cy="110" r="82" fill="#eef6fb" stroke="#9ecfea" stroke-width="2" stroke-dasharray="8 5" opacity="0.8"/>
+          <!-- Ears -->
+          <ellipse cx="38"  cy="108" rx="20" ry="36" fill="#5babd6" transform="rotate(-12,38,108)"/>
+          <ellipse cx="142" cy="108" rx="20" ry="36" fill="#5babd6" transform="rotate(12,142,108)"/>
+          <ellipse cx="38"  cy="108" rx="11" ry="22" fill="#3d8ab8" transform="rotate(-12,38,108)" opacity="0.5"/>
+          <ellipse cx="142" cy="108" rx="11" ry="22" fill="#3d8ab8" transform="rotate(12,142,108)" opacity="0.5"/>
+          <!-- Body -->
+          <ellipse cx="90" cy="162" rx="48" ry="46" fill="#5babd6"/>
+          <ellipse cx="90" cy="165" rx="30" ry="32" fill="#8dcfea" opacity="0.5"/>
+          <!-- Head -->
+          <ellipse cx="90" cy="98" rx="52" ry="50" fill="#5babd6"/>
+          <!-- Antenna spikes -->
+          <ellipse cx="72"  cy="52" rx="5" ry="14" fill="#4a9ac4" transform="rotate(-18,72,52)"/>
+          <ellipse cx="90"  cy="46" rx="5" ry="15" fill="#4a9ac4"/>
+          <ellipse cx="108" cy="52" rx="5" ry="14" fill="#4a9ac4" transform="rotate(18,108,52)"/>
+          <ellipse cx="70"  cy="40" rx="4" ry="7"  fill="#d4899a" transform="rotate(-18,70,40)"/>
+          <ellipse cx="90"  cy="33" rx="4" ry="7"  fill="#d4899a"/>
+          <ellipse cx="110" cy="40" rx="4" ry="7"  fill="#d4899a" transform="rotate(18,110,40)"/>
+          <!-- Eyes -->
+          <ellipse cx="74" cy="96" rx="17" ry="20" fill="white"/>
+          <ellipse cx="106" cy="96" rx="17" ry="20" fill="white"/>
+          <ellipse cx="77"  cy="99" rx="10" ry="13" fill="#1a5c8a"/>
+          <ellipse cx="109" cy="99" rx="10" ry="13" fill="#1a5c8a"/>
+          <circle cx="79"  cy="101" r="6.5" fill="#0a2a40"/>
+          <circle cx="111" cy="101" r="6.5" fill="#0a2a40"/>
+          <circle cx="75"  cy="95"  r="3"   fill="white" opacity="0.9"/>
+          <circle cx="107" cy="95"  r="3"   fill="white" opacity="0.9"/>
+          <!-- Blush -->
+          <ellipse cx="56"  cy="114" rx="10" ry="6" fill="#e8919e" opacity="0.4"/>
+          <ellipse cx="124" cy="114" rx="10" ry="6" fill="#e8919e" opacity="0.4"/>
+          <!-- Smile -->
+          <path d="M72,122 Q90,138 108,122" stroke="#2a5a7a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <rect x="82" y="122" width="6" height="5" rx="1.5" fill="white"/>
+          <rect x="92" y="122" width="6" height="5" rx="1.5" fill="white"/>
+          <!-- Arms -->
+          <ellipse cx="46"  cy="156" rx="14" ry="9" fill="#5babd6" transform="rotate(-25,46,156)"/>
+          <ellipse cx="134" cy="156" rx="14" ry="9" fill="#5babd6" transform="rotate(25,134,156)"/>
+        </svg>
+      </div>
+      <div class="about-badges">
+        <span class="badge">🎓 B.Tech CSE</span>
+        <span class="badge">💡 Open to Internships</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="about-lead">Passionate about building things that matter.</p>
+      <p>I'm a Computer Science Engineering student with a love for <strong>Web Development</strong>, <strong>Machine Learning</strong>, and <strong>Cyber Security</strong>. I thrive at the intersection of creativity and logic — turning complex problems into clean, elegant solutions.</p>
+      <p>When I'm not coding, I'm exploring new ML papers, experimenting with security challenges, or learning something new every single day.</p>
+      <div class="about-interests">
+        <div class="interest-chip">🌐 Web Dev</div>
+        <div class="interest-chip">🤖 ML & AI</div>
+        <div class="interest-chip">🔐 Cyber Security</div>
+        <div class="interest-chip">📊 Deep Learning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-categories">
+
+    <div class="skill-group">
+      <h3 class="skill-group-title"><span>🖥️</span> Languages</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><span class="skill-icon">🐍</span>Python<div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">⚡</span>C++<div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🌐</span>JavaScript<div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3 class="skill-group-title"><span>🎨</span> Frontend</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><span class="skill-icon">📄</span>HTML5<div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🎨</span>CSS3<div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3 class="skill-group-title"><span>🛠️</span> Backend & DB</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><span class="skill-icon">🍶</span>Flask<div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🍃</span>MongoDB<div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🗄️</span>DBMS<div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3 class="skill-group-title"><span>🧠</span> AI & Security</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><span class="skill-icon">🤖</span>Machine Learning<div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🧬</span>Deep Learning<div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🔐</span>Cyber Security<div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div></div>
+        <div class="skill-card"><span class="skill-icon">🌲</span>DSA<div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-icon">🏨</div>
+      <h3>Hostel & PG Recommendation System</h3>
+      <p>A full-stack platform helping students find suitable hostels and PG accommodations based on preferences, budget, and location.</p>
+      <div class="project-tags">
+        <span class="tag">Flask</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-card project-card--placeholder">
+      <div class="project-icon">🔮</div>
+      <h3>Coming Soon</h3>
+      <p>More exciting projects are in the works — stay tuned for ML and Cyber Security builds!</p>
+      <div class="project-tags">
+        <span class="tag">ML</span>
+        <span class="tag">Python</span>
+        <span class="tag">In Progress</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="contact-wrapper">
+
+    <!-- Alien waving in contact section -->
+    <div class="contact-illustration" aria-hidden="true">
+      <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+        <!-- Envelope behind -->
+        <rect x="18" y="90" width="164" height="110" rx="12" fill="#c9a0b4" opacity="0.2"/>
+        <rect x="18" y="90" width="164" height="110" rx="12" fill="none" stroke="#c9a0b4" stroke-width="1.5"/>
+        <path d="M18,90 L100,148 L182,90" fill="none" stroke="#c9a0b4" stroke-width="1.5"/>
+        <!-- Alien peeking over envelope -->
+        <!-- Ears -->
+        <ellipse cx="66"  cy="72" rx="14" ry="26" fill="#5babd6" transform="rotate(-10,66,72)"/>
+        <ellipse cx="134" cy="72" rx="14" ry="26" fill="#5babd6" transform="rotate(10,134,72)"/>
+        <!-- Head -->
+        <ellipse cx="100" cy="68" rx="40" ry="38" fill="#5babd6"/>
+        <!-- Antenna -->
+        <ellipse cx="88"  cy="32" rx="4" ry="12" fill="#4a9ac4" transform="rotate(-15,88,32)"/>
+        <ellipse cx="100" cy="28" rx="4" ry="13" fill="#4a9ac4"/>
+        <ellipse cx="112" cy="32" rx="4" ry="12" fill="#4a9ac4" transform="rotate(15,112,32)"/>
+        <circle cx="87"  cy="21" r="5" fill="#d4899a"/>
+        <circle cx="100" cy="17" r="5" fill="#d4899a"/>
+        <circle cx="113" cy="21" r="5" fill="#d4899a"/>
+        <!-- Eyes -->
+        <ellipse cx="85"  cy="66" rx="13" ry="16" fill="white"/>
+        <ellipse cx="115" cy="66" rx="13" ry="16" fill="white"/>
+        <ellipse cx="87"  cy="69" rx="8"  ry="10" fill="#1a5c8a"/>
+        <ellipse cx="117" cy="69" rx="8"  ry="10" fill="#1a5c8a"/>
+        <circle cx="88"  cy="70" r="5.5" fill="#0a2a40"/>
+        <circle cx="118" cy="70" r="5.5" fill="#0a2a40"/>
+        <circle cx="85"  cy="65" r="2.5" fill="white" opacity="0.9"/>
+        <circle cx="115" cy="65" r="2.5" fill="white" opacity="0.9"/>
+        <!-- Blush -->
+        <ellipse cx="68"  cy="80" rx="9" ry="5" fill="#e8919e" opacity="0.4"/>
+        <ellipse cx="132" cy="80" rx="9" ry="5" fill="#e8919e" opacity="0.4"/>
+        <!-- Smile -->
+        <path d="M84,88 Q100,102 116,88" stroke="#2a5a7a" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <rect x="93" y="88" width="5" height="4" rx="1" fill="white"/>
+        <rect x="102" y="88" width="5" height="4" rx="1" fill="white"/>
+        <!-- Waving arm -->
+        <ellipse cx="150" cy="82" rx="22" ry="10" fill="#5babd6" transform="rotate(-50,150,82)"/>
+        <ellipse cx="162" cy="64" rx="13" ry="9" fill="#4a9ac4"/>
+        <!-- Stars -->
+        <circle cx="170" cy="30" r="2.5" fill="#9ecfea" opacity="0.7"/>
+        <circle cx="28"  cy="40" r="2"   fill="#c9a0b4" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <div class="contact-cards">
+      <a href="mailto:tanyavaidya3@gmail.com" class="contact-card">
+        <div class="contact-card-icon">📧</div>
+        <div>
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">tanyavaidya3@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/tanya-vaidya-78968a287" target="_blank" class="contact-card">
+        <div class="contact-card-icon">💼</div>
+        <div>
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">tanya-vaidya-78968a287</div>
+        </div>
+      </a>
+      <a href="https://github.com/yourgithub" target="_blank" class="contact-card">
+        <div class="contact-card-icon">🐙</div>
+        <div>
+          <div class="contact-card-label">GitHub</div>
+          <div class="contact-card-value">github.com/yourgithub</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <!-- Tiny alien footer mascot -->
+  <div class="footer-char" aria-hidden="true">
+    <svg viewBox="0 0 90 80" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="28" cy="42" rx="12" ry="22" fill="#5babd6" transform="rotate(-12,28,42)"/>
+      <ellipse cx="62" cy="42" rx="12" ry="22" fill="#5babd6" transform="rotate(12,62,42)"/>
+      <ellipse cx="45" cy="55" rx="30" ry="26" fill="#5babd6"/>
+      <ellipse cx="45" cy="58" rx="18" ry="16" fill="#8dcfea" opacity="0.5"/>
+      <ellipse cx="45" cy="38" rx="30" ry="28" fill="#5babd6"/>
+      <ellipse cx="34" cy="38" rx="11" ry="13" fill="white"/>
+      <ellipse cx="56" cy="38" rx="11" ry="13" fill="white"/>
+      <circle cx="36" cy="40" r="7" fill="#0a2a40"/>
+      <circle cx="58" cy="40" r="7" fill="#0a2a40"/>
+      <circle cx="33" cy="36" r="2.5" fill="white" opacity="0.9"/>
+      <circle cx="55" cy="36" r="2.5" fill="white" opacity="0.9"/>
+      <ellipse cx="24" cy="48" rx="7" ry="4" fill="#e8919e" opacity="0.4"/>
+      <ellipse cx="66" cy="48" rx="7" ry="4" fill="#e8919e" opacity="0.4"/>
+      <path d="M34,54 Q45,64 56,54" stroke="#2a5a7a" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="37" cy="14" rx="4" ry="10" fill="#4a9ac4" transform="rotate(-15,37,14)"/>
+      <ellipse cx="45" cy="11" rx="4" ry="11" fill="#4a9ac4"/>
+      <ellipse cx="53" cy="14" rx="4" ry="10" fill="#4a9ac4" transform="rotate(15,53,14)"/>
+      <circle cx="36" cy="5"  r="4" fill="#d4899a" transform="rotate(-15,36,5)"/>
+      <circle cx="45" cy="2"  r="4" fill="#d4899a"/>
+      <circle cx="54" cy="5"  r="4" fill="#d4899a" transform="rotate(15,54,5)"/>
+    </svg>
+  </div>
+  <p>Crafted with <span class="heart">♥</span> by Tanya Vaidya &nbsp;·&nbsp; © 2026</p>
+  <p class="footer-sub">Built with HTML, CSS & passion</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
